@@ -4,6 +4,7 @@ import { StyleSheet, View, Text } from "react-native"
 import { Button } from "react-native-paper";
 import { useState } from "react";
 import CarInfo from "../components/CarInfo";
+import ExpenseList from "../components/ExpenseList";
 
 function MainScreen() {
     const [counter, setCounter] = useState(0)
@@ -14,9 +15,7 @@ function MainScreen() {
         <View style={styles.container}>
             <StatusBar style="auto" />
             <CarInfo />
-            <Text>{counter}</Text>
-            <Text>Car Companion</Text>
-            <Button onPress={handlePress}>Klikni me</Button>
+            <ExpenseList />
         </View>
 
     )
