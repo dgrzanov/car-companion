@@ -4,12 +4,15 @@ import { Dimensions, StyleSheet, View } from 'react-native';
 import { Text } from 'react-native-paper';
 import { Avatar } from 'react-native-paper';
 
-function ExpenseListItem({ expense_type, cost }: any) {
+function ExpenseListItem({ expense_type, cost, mileage }: any) {
     return ( 
         <View style={styles.container}>
             <Avatar.Icon size={50} icon="gas-station" />
-            <Text> {expense_type} </Text>
-            <Text> {cost} </Text>
+            <View>
+                <Text>{expense_type}</Text>
+                <Text>{mileage} km</Text>
+            </View>
+            <Text>{cost} kn</Text>
         </View>
      );
 }
